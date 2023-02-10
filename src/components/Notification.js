@@ -1,13 +1,29 @@
+import { useSelector } from 'react-redux'
+import { useState, useEffect } from 'react';
+
 const Notification = () => {
+  const message = useSelector(state => state.message)
   const style = {
     border: 'solid',
     padding: 10,
     borderWidth: 1
   }
+
+  const [show, setShow] = useState(false)
+  useEffect(() => {
+    if (message !== ''){
+      setShow(true)
+      setTimeout(() => {
+        setShow(false)
+      }, 3000)
+    }
+  }, [message])
+
   return (
-    <div style={style}>
-      render here notification...
+    <div>
+      {show !== false && <div style={style}> {message} </div>}
     </div>
+ 
   )
 }
 

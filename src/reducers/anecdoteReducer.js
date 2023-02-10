@@ -1,21 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit'
-import anecdotesAtStart from '../db'
 
 const getId = () => (100000 * Math.random()).toFixed(0)
 
-const asObject = (anecdote) => {
-  return {
-    content: anecdote,
-    id: getId(),
-    votes: 0
-  }
-}
-
-const initialState = anecdotesAtStart.map(asObject)
-
 const anecdoteSlice = createSlice({
   name: 'anecdotes',
-  initialState,
+  initialState: [],
   reducers: {
     createAnecdote(state, action) {
       const content = action.payload
@@ -33,9 +22,12 @@ const anecdoteSlice = createSlice({
       const newAnecdote =  { ...anecdote, 'votes': anecdote.votes + 1 }
       const newState = [...filterState, newAnecdote]
       return newState.sort((a, b) => b.votes - a.votes)
+    },
+    setAnecdotes(state, action) {
+      return action.payload
     }
   }
 })
 
-export const { createAnecdote, addVote } = anecdoteSlice.actions
+export const { createAnecdote, addVote, setAnecdotes } = anecdoteSlice.actions
 export default anecdoteSlice.reducer
