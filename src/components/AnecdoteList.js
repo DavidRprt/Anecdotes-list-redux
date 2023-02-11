@@ -6,7 +6,6 @@ const AnecdoteList = () => {
     const anecdotes = useSelector(state => state.anecdotes)
 
     const filtered = anecdotes.filter(a =>a.content.includes(filterString))
-    console.log(filtered)
 
     return(
         <div>

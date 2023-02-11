@@ -1,9 +1,9 @@
 {
-  "anecdotes":[
+  "anecdotes": [
     {
       "content": "If it hurts, do it more often",
       "id": "47145",
-      "votes": 0
+      "votes": 9
     },
     {
       "content": "Adding manpower to a late software project makes it later!",
@@ -29,6 +29,46 @@
       "content": "Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.",
       "id": "98312",
       "votes": 0
+    },
+    {
+      "content": "GOL DE JULIAN",
+      "votes": 15,
+      "id": "WjLaFd4"
+    },
+    {
+      "content": "GOOOL",
+      "votes": 11,
+      "id": "LZRq7YR"
+    },
+    {
+      "content": "SIUUU",
+      "votes": 10,
+      "id": "6IHldsT"
+    },
+    {
+      "content": "GOOOOOOOOOOL",
+      "votes": 11,
+      "id": "wqAvV2P"
+    },
+    {
+      "content": "AHI VA MONTIEL",
+      "votes": 14,
+      "id": "xBi23_v"
+    },
+    {
+      "content": "SOMOS TODOS MONTIEL",
+      "votes": 13,
+      "id": "k-3T5g0"
+    },
+    {
+      "content": "MONTIEL AL ARCOOOO",
+      "votes": 12,
+      "id": "f4g714S"
+    },
+    {
+      "content": "ARGENTINA CAMPEONA DEL MUNDO",
+      "votes": 11,
+      "id": "EmIla6-"
     }
   ]
 }

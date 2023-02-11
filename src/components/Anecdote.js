@@ -1,4 +1,4 @@
-import  { addVote } from '../reducers/anecdoteReducer'
+import  { vote } from '../reducers/anecdoteReducer'
 import { useDispatch } from 'react-redux'
 import { getMessage } from '../reducers/notificationReducer'
 
@@ -6,7 +6,7 @@ const Anecdote = props => {
     const dispatch = useDispatch()
 
     const handleVote = event => {
-      dispatch(addVote(props.anecdote))
+      dispatch(vote(props.anecdote))
       dispatch(getMessage(`You voted ${props.anecdote.content}`))
     }
 
