@@ -15,7 +15,7 @@ const Notification = () => {
       setShow(true)
       setTimeout(() => {
         setShow(false)
-      }, 3000)
+      }, 4000)
     }
   }, [message])
 

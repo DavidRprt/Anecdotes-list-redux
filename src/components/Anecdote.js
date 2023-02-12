@@ -1,6 +1,7 @@
 import  { vote } from '../reducers/anecdoteReducer'
 import { useDispatch } from 'react-redux'
 import { getMessage } from '../reducers/notificationReducer'
+import { Link } from 'react-router-dom'
 
 const Anecdote = props => {
     const dispatch = useDispatch()
@@ -13,10 +14,10 @@ const Anecdote = props => {
     return (
         <div>
             <div>
-              {props.anecdote.content}
+            <Link to={`/anecdotes/${props.anecdote.id}`}>{props.anecdote.content}</Link>
             </div>
             <div>
-              has {props.anecdote.votes}
+              has {props.anecdote.votes} votes
             <button onClick={() => handleVote()}>vote</button>
             </div>
         </div>
