@@ -3,6 +3,7 @@ import  { appendAnecdote } from '../reducers/anecdoteReducer'
 import { getMessage } from '../reducers/notificationReducer'
 import { useNavigate } from 'react-router-dom'
 import { useField } from '../hooks'
+import { Form, Button } from 'react-bootstrap'
 
 const AddForm = () => {
     const dispatch = useDispatch()
@@ -19,8 +20,15 @@ const AddForm = () => {
         <div>
           <h2>create new</h2>
           <form onSubmit={handleForm}>
-            <div>anecdote: <input type={anecdote.type} value={anecdote.value} onChange={anecdote.onChange}/></div>
-            <button type="submit">create</button>
+            <Form.Group>
+              <Form.Label>anecdote:</Form.Label>
+              <Form.Control
+                type={anecdote.type}
+                value={anecdote.value}
+                onChange={anecdote.onChange}
+              />
+              <Button variant="primary" type="submit">create</Button>
+            </Form.Group>
           </form>
         </div>
     )

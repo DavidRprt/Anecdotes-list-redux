@@ -1,13 +1,9 @@
 import { useSelector } from 'react-redux'
 import { useState, useEffect } from 'react';
+import Alert from 'react-bootstrap/Alert';
 
 const Notification = () => {
   const message = useSelector(state => state.message)
-  const style = {
-    border: 'solid',
-    padding: 10,
-    borderWidth: 1
-  }
 
   const [show, setShow] = useState(false)
   useEffect(() => {
@@ -20,8 +16,8 @@ const Notification = () => {
   }, [message])
 
   return (
-    <div>
-      {show !== false && <div style={style}> {message} </div>}
+    <div className="container">
+      {show !== false && <Alert variant="success"> {message} </Alert>}
     </div>
  
   )
